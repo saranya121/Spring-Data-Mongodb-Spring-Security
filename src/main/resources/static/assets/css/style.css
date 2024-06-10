@@ -1,0 +1,84 @@
+.employee-container {
+	width: 100%;
+	font-family: Helvetica;
+	background-color: rgb(199, 235, 162);
+}
+
+.employee-card {
+	width: 100%;
+	max-width: 500px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-employee-container {
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	background-color: #ededff;
+	padding: 10px;
+	border-top: 1px black;
+}
+
+.btn-save, .btn-save:hover {
+	background-color: green;
+	color: white;
+}
+
+.red-color {
+	color: red;
+}
+
+.btn-search {
+	background-color: #007bff;
+	color: white;
+}
+
+.btn-search:hover {
+	background-color: #0056b3;
+}
+
+.btn-delete, .btn-delete:hover {
+	background-color: #f27373;
+	color: white;
+}
+
+.btn-update, .btn-update:hover {
+	background-color: #3f3838;
+	color: white;
+}
+
+.btn-back {
+	background-color: grey;
+	color: white;
+}
+
+.btn-back:hover {
+	background-color: grey;
+}
+
+#toast-container>.toast {
+	background-color: #444444;
+	color: #ffffff;
+	border-radius: 8px;
+	font-family: 'Arial', sans-serif;
+	font-size: 16px;
+	opacity: 1 !important;
+}
+
+#toast-container>.toast-success {
+	background-color: #28a745;
+}
+
+#toast-container>.toast-error {
+	background-color: #dc3545;
+}
+
+#toast-container>.toast-info {
+	background-color: #17a2b8;
+}

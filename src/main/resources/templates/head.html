@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee Management System</title>
+<!-- Bootstrap CSS -->
+<link th:href="@{assets/css/bootstrap.min.css}" rel="stylesheet">
+<!-- Custom CSS -->
+<link th:href="@{assets/css/style.css}" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+</head>
+<body class="employee-container">
+	<div th:fragment="body">
+		<div class="header row">
+			<div class=" col-8">
+				<h3>Employee Management System</h3>
+			</div>
+			<div class="col-4 text-end">
+				<button type="button" class="btn btn-primary"
+					onclick="switchPage('Add')">Add Employee</button>
+				<button type="button" class="btn btn-secondary"
+					onclick="switchPage('View')">View Employee</button>
+			</div>
+		</div>
+	</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script th:if="${status != null}" th:inline="javascript">
+		/*<![CDATA[*/
+		toastr.success('[[${status}]]');
+		/*]]>*/
+	</script>
+	<script th:if="${error != null}" th:inline="javascript">
+		/*<![CDATA[*/
+		toastr.error('[[${error}]]');
+		/*]]>*/
+	</script>
+	<script th:if="${info != null}" th:inline="javascript">
+		/*<![CDATA[*/
+		toastr.info('[[${info}]]');
+		/*]]>*/
+	</script>
